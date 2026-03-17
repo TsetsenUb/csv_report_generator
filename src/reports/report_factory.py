@@ -16,6 +16,9 @@ class ReportFactory:
     ) -> None:
         """Регистрирует новый тип отчёта."""
 
+        if not issubclass(report_class, BaseReport):
+            raise TypeError("The report_class should be a subclass of BaseReport")
+
         cls._reports[name] = report_class
 
     @classmethod
