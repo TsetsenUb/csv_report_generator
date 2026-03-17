@@ -18,7 +18,7 @@ class ArgsParser:
         """Парсит аргументы командной строки."""
 
         parser = argparse.ArgumentParser(
-            description="Программа для формирования отчетов по переданным csv файлам",
+            description="Программа для формирования отчетов по переданным csv-файлам",
         )
 
         parser.add_argument(
@@ -26,7 +26,7 @@ class ArgsParser:
             nargs="*",
             required=True,
             type=str,
-            help="Список файлов для обработки",
+            help="Список csv-файлов для обработки",
         )
 
         parser.add_argument(
@@ -41,7 +41,7 @@ class ArgsParser:
             "--delimiter",
             default=",",
             type=str,
-            help="Разделитель для чтения csv файлов",
+            help="Разделитель для чтения csv-файлов",
         )
 
         args = parser.parse_args()
