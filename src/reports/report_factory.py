@@ -33,7 +33,7 @@ class ReportFactory:
         if not report_class:
             raise ValueError(f"Unknown report type: {name}")
 
-        return report_class()
+        return report_class(name)
 
 
 ReportFactory.register_report("median-coffee", MedianCoffeeReport)

@@ -8,12 +8,6 @@ import statistics
 class MedianCoffeeReport(BaseReport):
     """Отчёт о медианных тратах на кофе по студентам."""
 
-    @property
-    def name(self) -> str:
-        """Геттер для имени отчета."""
-
-        return "median-coffee"
-
     def __group_by_student(self, data: list[dict[str, Any]]) -> dict[str, list[int]]:
         """
         Группирует данные о тратах на кофе по студентам.

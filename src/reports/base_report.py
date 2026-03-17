@@ -5,11 +5,13 @@ from typing import Any
 class BaseReport(ABC):
     """Базовый класс для всех отчётов."""
 
+    def __init__(self, name):
+        self._name = name
+
     @property
-    @abstractmethod
     def name(self) -> str:
         """Имя отчёта для идентификации в CLI."""
-        pass
+        return self._name
 
     @abstractmethod
     def generate(self, data: list[dict[str, Any]]) -> Any:
