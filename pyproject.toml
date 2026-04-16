@@ -1,0 +1,25 @@
+[project]
+name = "csv_report_generator"
+version = "0.1.0"
+authors = [
+    { name = "Ubushiev Tsetsen", email = "tsetsn@ynadex.ru" },
+]
+description = "CSV File Report Generator with extensible architecture"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "colorama==0.4.6",
+    "iniconfig==2.3.0",
+    "packaging==26.0",
+    "pluggy==1.6.0",
+    "pygments==2.19.2",
+    "tabulate==0.10.0",
+]
+
+[dependency-groups]
+dev = [
+    "coverage>=7.13.5",
+    "pytest>=9.0.3",
+    "pytest-cov>=7.1.0",
+    "pytest-mock>=3.15.1",
+]
